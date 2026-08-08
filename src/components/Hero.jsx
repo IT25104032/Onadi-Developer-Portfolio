@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="relative min-h-screen px-6 bg-[#0B0F1A] overflow-hidden flex items-center">
+    <section className="relative min-h-screen px-6 pt-10 bg-[#0B0F1A] overflow-hidden flex items-start">
 
       {/* GRID BACKGROUND */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
