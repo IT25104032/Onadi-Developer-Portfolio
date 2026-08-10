@@ -2,7 +2,7 @@ function Navbar() {
   return (
     <nav className="w-full flex justify-between items-center px-12 py-6">
       {/* Logo */}
-      <h1 className="text-4xl font-bold text-white tracking-tight">
+      <h1 className="text-4xl font-semibold text-white tracking-tight">
         Onadi<span className="text-violet-500">.</span>
       </h1>
 

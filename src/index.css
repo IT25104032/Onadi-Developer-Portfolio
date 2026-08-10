@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+
+/* TERMINAL FONT */
+.terminal-font {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.5;   /* 🔥 reduced */
+  letter-spacing: 0.3px;
+}
+
+/* TERMINAL GLOW */
+.terminal-glow {
+  box-shadow: 0 0 80px rgba(124, 58, 237, 0.25);
+}
