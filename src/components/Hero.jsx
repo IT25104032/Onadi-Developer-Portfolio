@@ -149,11 +149,7 @@ function Hero() {
 
               <div className="absolute inset-0 bg-purple-600 blur-3xl opacity-30"></div>
 
-              <img
-                src="dev.gif"
-                alt="profile"
-                className="relative w-[350px]"
-              />
+              <img src="/dev.gif" alt="profile" />
 
             </div>
 
