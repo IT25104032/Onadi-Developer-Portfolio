@@ -121,7 +121,7 @@ function About() {
 
                         {/* IMAGE */}
                         <img
-                            src="/about.jpg"  // 🔥 replace with your image
+                            src="/about.jpg" 
                             alt="about"
                             className="w-[800px] rounded-2xl border border-[#2A2F45] relative z-10 object-cover mt-5 -mt-40"
                         />

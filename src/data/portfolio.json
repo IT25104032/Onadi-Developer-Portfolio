@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "title": "FreeCheck",
+      "description": "A smart washroom occupancy monitoring system designed to provide real-time stall availability while maintaining user privacy.",
+      "technologies": [
+        "ESP32",
+        "PIR Sensors",
+        "Firebase",
+        "JavaScript"
+      ],
+      "image": "freecheck"
+    },
+    {
+      "title": "RentFlow",
+      "description": "An equipment hire and rental management system being developed for COMPULIN (Pvt) Ltd. to streamline rental operations and management.",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "MySQL"
+      ],
+      "image": "rentflow",
+      "github": "YOUR_GITHUB_LINK_HERE"
+    }
+  ]
+}

@@ -168,7 +168,7 @@ function Hero() {
 
                     <div className="bg-[#0D1124] border border-[#2A2F45] rounded-xl p-6 text-center">
                         <p className="text-purple-400 text-2xl mb-2">💻</p>
-                        <h2 className="text-white text-2xl font-semibold">10+</h2>
+                        <h2 className="text-white text-2xl font-semibold">5+</h2>
                         <p className="text-gray-400 text-sm">Projects Completed</p>
                     </div>
 
