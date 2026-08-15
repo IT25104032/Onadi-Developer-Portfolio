@@ -1,4 +1,5 @@
 import portfolio from "../data/portfolio.json";
+import ScrollReveal from "./ScrollReveal";
 
 function Projects() {
   return (

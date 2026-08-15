@@ -14,3 +14,930 @@
 .terminal-glow {
   box-shadow: 0 0 80px rgba(124, 58, 237, 0.25);
 }
+
+
+/* =========================================================
+   TECH STACK SECTION
+========================================================= */
+
+.tech-stack-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 900px;
+
+  padding: 110px 30px 90px;
+
+  overflow: hidden;
+
+  background: #070914;
+
+  color: white;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.tech-grid {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.14;
+
+  background-image:
+    linear-gradient(
+      rgba(96, 70, 170, 0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(96, 70, 170, 0.18) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   PURPLE BACKGROUND GLOW
+========================================================= */
+
+.tech-glow {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+}
+
+
+/* Main glow */
+
+.tech-glow-main {
+  width: 750px;
+  height: 520px;
+
+  left: 50%;
+  top: 52%;
+
+  transform:
+    translate(-50%, -50%);
+
+  background: #7027c9;
+
+  opacity: 0.17;
+}
+
+
+/* Secondary glow */
+
+.tech-glow-small {
+  width: 450px;
+  height: 320px;
+
+  left: 50%;
+  top: 55%;
+
+  transform:
+    translate(-50%, -50%);
+
+  background: #a855f7;
+
+  opacity: 0.09;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.tech-stack-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.tech-stack-header {
+  text-align: center;
+
+  margin-bottom: 58px;
+}
+
+
+/* Small terminal-style text */
+
+.tech-terminal-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #a855f7;
+
+  font-family:
+    "JetBrains Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 13px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* Main title */
+
+.tech-stack-header h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      82px
+    );
+
+  font-weight: 500;
+
+  letter-spacing: -3px;
+
+  line-height: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #c4a7ef 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Description */
+
+.tech-stack-header p {
+  margin:
+    20px auto 0;
+
+  max-width: 600px;
+
+  color: #a5a7b8;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ROW CONTAINER
+========================================================= */
+
+.tech-stack-rows {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   INDIVIDUAL ROW
+========================================================= */
+
+.tech-stack-row {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  width: max-content;
+
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   TECH CARD
+========================================================= */
+
+.tech-card {
+
+  position: relative;
+
+  width: 125px;
+  height: 125px;
+
+  flex: 0 0 125px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border:
+    1px solid
+    rgba(
+      180,
+      150,
+      255,
+      0.16
+    );
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(
+        30,
+        27,
+        48,
+        0.88
+      ),
+      rgba(
+        10,
+        12,
+        25,
+        0.94
+      )
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.4s
+      cubic-bezier(
+        0.16,
+        1,
+        0.3,
+        1
+      ),
+
+    border-color 0.4s ease,
+
+    box-shadow 0.4s ease,
+
+    background 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD INNER LIGHT
+========================================================= */
+
+.tech-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(
+        168,
+        85,
+        247,
+        0.14
+      ),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+
+/* =========================================================
+   PURPLE SHADOW UNDER CARD
+========================================================= */
+
+.tech-card::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 12%;
+  right: 12%;
+
+  bottom: -14px;
+
+  height: 20px;
+
+  border-radius: 50%;
+
+  background:
+    #a855f7;
+
+  filter:
+    blur(18px);
+
+  opacity: 0;
+
+  transform:
+    scaleX(0.55);
+
+  transition:
+    opacity 0.4s ease,
+
+    transform 0.4s ease;
+}
+
+
+/* =========================================================
+   ICON CONTAINER
+========================================================= */
+
+.tech-icon-container {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.tech-icon {
+
+  width: 46px;
+  height: 46px;
+
+  object-fit: contain;
+
+  /*
+    NORMAL STATE
+
+    Actual SVG is muted.
+  */
+
+  filter:
+    grayscale(1)
+    brightness(1.55)
+    contrast(0.72);
+
+  opacity: 0.82;
+
+  transition:
+    filter 0.45s ease,
+
+    opacity 0.45s ease,
+
+    transform 0.45s
+      cubic-bezier(
+        0.16,
+        1,
+        0.3,
+        1
+      );
+}
+
+
+/* =========================================================
+   TECHNOLOGY NAME
+========================================================= */
+
+.tech-name {
+
+  position: relative;
+
+  z-index: 2;
+
+  color:
+    #a6a8b8;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.4s ease,
+
+    transform 0.4s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.tech-card:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.04);
+
+  border-color:
+    rgba(
+      180,
+      120,
+      255,
+      0.65
+    );
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(
+        39,
+        29,
+        62,
+        0.96
+      ),
+      rgba(
+        12,
+        13,
+        28,
+        0.98
+      )
+    );
+
+  box-shadow:
+
+    0 12px 30px
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    ),
+
+    0 12px 45px
+    rgba(
+      139,
+      92,
+      246,
+      0.25
+    );
+}
+
+
+/* Card glow */
+
+.tech-card:hover::before {
+  opacity: 1;
+}
+
+
+/* Purple shadow */
+
+.tech-card:hover::after {
+
+  opacity: 0.95;
+
+  transform:
+    scaleX(1);
+}
+
+
+/* =========================================================
+   SHOW ORIGINAL BRAND COLOUR
+========================================================= */
+
+.tech-card:hover .tech-icon {
+
+  /*
+    IMPORTANT:
+
+    This removes the grayscale filter,
+    revealing the ACTUAL SVG artwork.
+
+    Therefore:
+    Python = blue/yellow
+    JavaScript = yellow
+    HTML = orange
+    CSS = blue
+    Spring = green
+    React = cyan
+    Node = green
+    Tailwind = cyan
+    MySQL = blue/orange
+    Firebase = yellow/orange
+    Git = orange
+    GitHub = original
+    Linux = original Tux
+    VS Code = blue
+    Vercel = original
+    Figma = multicolour
+    R = blue
+  */
+
+  filter: none;
+
+  opacity: 1;
+
+  transform:
+    translateY(-4px)
+    scale(1.1);
+}
+
+
+/* =========================================================
+   NAME HOVER
+========================================================= */
+
+.tech-card:hover .tech-name {
+
+  color:
+    #e0c8ff;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.tech-footer {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  margin-top: 55px;
+
+  color:
+    #777b91;
+
+  font-family:
+    "JetBrains Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 12px;
+}
+
+
+.tech-footer-symbol {
+  color:
+    #a855f7;
+}
+
+
+.tech-cursor {
+
+  color:
+    #a855f7;
+
+  animation:
+    techBlink 1s
+    steps(1)
+    infinite;
+}
+
+
+@keyframes techBlink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+
+  .tech-stack-row {
+    gap: 18px;
+  }
+
+
+  .tech-card {
+
+    width: 135px;
+    height: 135px;
+
+    flex-basis: 135px;
+  }
+
+
+  .tech-icon {
+
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .tech-stack-section {
+
+    padding:
+      100px 20px 80px;
+  }
+
+
+  .tech-stack-row {
+
+    gap: 10px;
+  }
+
+
+  .tech-card {
+
+    width: 105px;
+    height: 115px;
+
+    flex-basis: 105px;
+  }
+
+
+  .tech-icon {
+
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .tech-name {
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .tech-stack-section {
+
+    padding:
+      80px 15px 70px;
+  }
+
+
+  .tech-stack-header {
+
+    margin-bottom:
+      40px;
+  }
+
+
+  .tech-stack-header h2 {
+
+    font-size:
+      44px;
+
+    letter-spacing:
+      -2px;
+  }
+
+
+  .tech-stack-header p {
+
+    font-size:
+      13px;
+  }
+
+
+  /*
+     On mobile, maintain the
+     6 / 5 / 4 / 3 concept as
+     closely as the screen allows.
+  */
+
+  .tech-stack-row {
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+
+    width: 100%;
+
+    max-width: 360px;
+
+    gap: 10px;
+  }
+
+
+  .tech-stack-row:nth-child(1) {
+
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+  }
+
+
+  .tech-stack-row:nth-child(2) {
+
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+  }
+
+
+  .tech-stack-row:nth-child(3) {
+
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+
+    max-width:
+      250px;
+  }
+
+
+  .tech-stack-row:nth-child(4) {
+
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+
+    max-width:
+      250px;
+  }
+
+
+  .tech-card {
+
+    width: 100%;
+
+    height: 105px;
+
+    flex: none;
+  }
+
+
+  .tech-card:hover {
+
+    transform:
+      translateY(-8px)
+      scale(1.03);
+  }
+
+
+  .tech-icon {
+
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .tech-name {
+
+    font-size:
+      10px;
+  }
+
+
+  .tech-footer {
+
+    margin-top:
+      40px;
+
+    font-size:
+      10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .tech-stack-header h2 {
+
+    font-size:
+      38px;
+  }
+
+
+  .tech-stack-row {
+
+    max-width:
+      300px;
+
+    gap:
+      8px;
+  }
+
+
+  .tech-card {
+
+    height:
+      105px;
+  }
+
+
+  .tech-icon {
+
+    width:
+      38px;
+
+    height:
+      38px;
+  }
+
+}
