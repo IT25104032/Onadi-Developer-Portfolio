@@ -56,10 +56,8 @@ function About() {
 
                         {/* DESCRIPTION */}
 
-                        <p className="text-gray-400 leading-relaxed mb-8 whitespace-pre-line">
-
+                        <p className="text-gray-400 text-sm whitespace-pre-line leading-relaxed">
                             {about.description}
-
                         </p>
 
 
@@ -67,7 +65,7 @@ function About() {
                             CARDS
                         ================================================= */}
 
-                        <div className="space-y-4">
+                        <div className="space-y-4 mt-12">
 
                             {about.cards.map((card, index) => (
 

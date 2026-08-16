@@ -1,0 +1,23 @@
+{
+  "tag": "ACHIEVEMENTS",
+  "title": "Awards & Achievements",
+  "subtitle": "Recognition that reflects my hard work, consistency, and dedication to academic excellence.",
+
+  "awards": [
+    {
+      "type": "award",
+      "title": "Dean's List",
+      "period": "First Year - Semester 1",
+      "institution": "Sri Lanka Institute of Information Technology (SLIIT)",
+      "year": "2025/26",
+      "icon": "🏆",
+      "image": "/deanslist1.1.jpg"
+    },
+
+    {
+      "type": "placeholder",
+      "title": "More achievements coming soon.",
+      "icon": "🏆"
+    }
+  ]
+}

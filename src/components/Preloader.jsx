@@ -1,194 +1,232 @@
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-function Preloader({ onComplete }) {
-  const [step, setStep] = useState(0);
+function Preloader() {
   const [progress, setProgress] = useState(0);
-  const [closing, setClosing] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Lines appear one after another
-    const timers = [
-      setTimeout(() => setStep(1), 300),
-      setTimeout(() => setStep(2), 700),
-      setTimeout(() => setStep(3), 1100),
-      setTimeout(() => setStep(4), 1500),
-    ];
+    let value = 0;
 
-    // Progress bar
-    let currentProgress = 0;
+    const interval = setInterval(() => {
+      value += Math.floor(Math.random() * 8) + 2;
 
-    const progressInterval = setInterval(() => {
-      currentProgress += 5;
+      if (value >= 100) {
+        value = 100;
+        clearInterval(interval);
 
-      setProgress(currentProgress);
-
-      if (currentProgress >= 100) {
-        clearInterval(progressInterval);
+        setTimeout(() => {
+          setVisible(false);
+        }, 500);
       }
-    }, 45);
 
-    // Start closing animation
-    const closeTimer = setTimeout(() => {
-      setClosing(true);
-    }, 2200);
+      setProgress(value);
+    }, 100);
 
-    // Remove preloader
-    const completeTimer = setTimeout(() => {
-      onComplete();
-    }, 2900);
+    return () => clearInterval(interval);
+  }, []);
 
-    return () => {
-      timers.forEach(clearTimeout);
-      clearInterval(progressInterval);
-      clearTimeout(closeTimer);
-      clearTimeout(completeTimer);
-    };
-  }, [onComplete]);
+  const loadingSteps = [
+    {
+      text: "initializing portfolio",
+      done: progress >= 20,
+    },
+
+  ];
 
   return (
-    <div
-      className={`preloader ${
-        closing ? "preloader-closing" : ""
-      }`}
-    >
+    <AnimatePresence>
+      {visible && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          exit={{
+            opacity: 0,
+            scale: 1.03,
+            transition: { duration: 0.6 }
+          }}
+          className="fixed inset-0 z-[9999] bg-[#050816] text-white overflow-hidden"
+        >
 
-      {/* ========================= */}
-      {/* TERMINAL */}
-      {/* ========================= */}
+          {/* GRID */}
+          <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-      <div
-        className={`preloader-terminal ${
-          closing ? "terminal-expand" : ""
-        }`}
-      >
+          {/* PURPLE GLOW */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-700/20 blur-[140px] rounded-full" />
 
-        {/* TOP BAR */}
+          {/* SCANLINE */}
+          <motion.div
+            animate={{ y: ["-100%", "100vh"] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute left-0 right-0 h-[2px] bg-purple-500/20 shadow-[0_0_20px_rgba(168,85,247,0.5)]"
+          />
 
-        <div className="preloader-topbar">
+          {/* CONTENT */}
+          <div className="relative z-10 flex min-h-screen items-center justify-center px-6">
 
-          <div className="preloader-dots">
+            <div className="w-full max-w-[650px]">
 
-            <span className="dot red"></span>
-            <span className="dot yellow"></span>
-            <span className="dot green"></span>
+              {/* TOP LABEL */}
+              <div className="flex items-center gap-3 mb-8">
 
-          </div>
+                <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse shadow-[0_0_12px_rgba(168,85,247,0.9)]" />
 
-          <span className="preloader-title">
-            onadi@portfolio:~
-          </span>
+                <span className="font-mono text-xs tracking-[0.3em] text-purple-400 uppercase">
+                  System Boot
+                </span>
 
-          <div className="preloader-spacer"></div>
-
-        </div>
-
-
-        {/* TERMINAL CONTENT */}
-
-        <div className="preloader-content">
-
-          {/* COMMAND */}
-
-          <div className="preloader-line command">
-            <span className="green">&gt;</span>{" "}
-            <span>initializing portfolio...</span>
-          </div>
+                <span className="flex-1 h-px bg-purple-500/20" />
 
 
-          {/* LINE 1 */}
-
-          {step >= 1 && (
-            <div className="preloader-line success-line">
-              <span className="green">&gt;</span>{" "}
-              loading interface...
-              <span className="check">✓</span>
-            </div>
-          )}
-
-
-          {/* LINE 2 */}
-
-          {step >= 2 && (
-            <div className="preloader-line success-line">
-              <span className="green">&gt;</span>{" "}
-              loading projects...
-              <span className="check">✓</span>
-            </div>
-          )}
-
-
-          {/* LINE 3 */}
-
-          {step >= 3 && (
-            <div className="preloader-line success-line">
-              <span className="green">&gt;</span>{" "}
-              loading tech stack...
-              <span className="check">✓</span>
-            </div>
-          )}
-
-
-          {/* LINE 4 */}
-
-          {step >= 4 && (
-            <div className="preloader-line success-line">
-              <span className="green">&gt;</span>{" "}
-              preparing interface...
-              <span className="check">✓</span>
-            </div>
-          )}
-
-
-          {/* PROGRESS */}
-
-          <div className="preloader-progress-container">
-
-            <div className="preloader-progress-text">
-              <span className="green">&gt;</span>{" "}
-              loading portfolio...
-            </div>
-
-
-            <div className="progress-row">
-
-              <div className="progress-bar">
-
-                <div
-                  className="progress-fill"
-                  style={{
-                    width: `${progress}%`,
-                  }}
-                />
 
               </div>
 
 
-              <span className="progress-number">
-                {progress}%
-              </span>
+              {/* LOGO */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-10"
+              >
+
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                  Onadi<span className="text-purple-500">.</span>
+                </h1>
+
+                <p className="mt-3 font-mono text-sm text-gray-500">
+                  developer.portfolio<span className="text-purple-400">()</span>
+                </p>
+
+              </motion.div>
+
+
+              {/* TERMINAL */}
+              <div className="border border-[#2A2F45] bg-[#080C18]/90 backdrop-blur-xl rounded-xl overflow-hidden shadow-[0_0_60px_rgba(124,58,237,0.12)]">
+
+                {/* TERMINAL BAR */}
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-[#2A2F45] bg-[#0B0F1A]">
+
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-400/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+
+                  <span className="ml-3 font-mono text-xs text-gray-600">
+                    onadi@portfolio:~
+                  </span>
+
+                </div>
+
+
+                {/* TERMINAL CONTENT */}
+                <div className="p-5 font-mono text-sm">
+
+                  {loadingSteps.map((step, index) => (
+
+                    <motion.div
+                      key={step.text}
+                      initial={{ opacity: 0 }}
+                      animate={{
+                        opacity: progress >= index * 20 ? 1 : 0.25
+                      }}
+                      className="flex items-center gap-3 py-1.5"
+                    >
+
+                      <span className="text-purple-400">
+                        &gt;
+                      </span>
+
+                      <span className="text-gray-400">
+                        {step.text}
+                      </span>
+
+                      <span className="ml-auto">
+
+                        {step.done ? (
+                          <span className="text-green-400">
+                            ✓
+                          </span>
+                        ) : (
+                          <span className="text-gray-700">
+                            ...
+                          </span>
+                        )}
+
+                      </span>
+
+                    </motion.div>
+
+                  ))}
+
+
+                  {/* CURSOR */}
+                  <div className="flex items-center gap-2 mt-3 text-purple-400">
+
+                    <span>&gt;</span>
+
+                    <span className="animate-pulse">
+                      _
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              {/* PROGRESS */}
+              <div className="mt-7">
+
+                <div className="flex justify-between mb-2 font-mono text-xs">
+
+                  <span className="text-gray-500">
+                    LOADING PORTFOLIO
+                  </span>
+
+                  <span className="text-purple-400">
+                    {progress}%
+                  </span>
+
+                </div>
+
+
+                <div className="h-1.5 bg-[#111629] rounded-full overflow-hidden">
+
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-purple-700 via-purple-500 to-violet-400 shadow-[0_0_15px_rgba(168,85,247,0.8)]"
+                    animate={{ width: `${progress}%` }}
+                    transition={{ duration: 0.15 }}
+                  />
+
+                </div>
+
+              </div>
+
+
+              {/* BOTTOM */}
+              <div className="flex justify-between mt-5 font-mono text-[10px] text-gray-600">
+
+
+                <span>
+                  {progress === 100
+                    ? "SYSTEM READY"
+                    : "PLEASE WAIT..."
+                  }
+                </span>
+
+              </div>
 
             </div>
 
           </div>
 
-
-          {/* START COMMAND */}
-
-          {progress >= 100 && (
-            <div className="preloader-start">
-
-              <span className="green">&gt;</span>{" "}
-              start portfolio
-              <span className="cursor">_</span>
-
-            </div>
-          )}
-
-        </div>
-
-      </div>
-
-    </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 

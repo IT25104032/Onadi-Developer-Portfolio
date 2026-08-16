@@ -5,7 +5,7 @@ function Navbar() {
   const { logo, links, resume } = data;
 
   return (
-    <nav className="w-full flex justify-between items-center px-12 py-6">
+    <nav className="w-full flex justify-between items-center px-12 py-6 bg-[#050816] text-white">
 
       {/* Logo */}
       <h1 className="text-4xl font-semibold text-white tracking-tight">
