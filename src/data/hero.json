@@ -1,0 +1,78 @@
+{
+  "profile": {
+    "name": "Onadi",
+    "role": "Aspiring Software Engineer",
+    "secondaryRole": "AI Enthusiast",
+    "description": "I enjoy building intelligent, user-friendly applications and exploring the endless possibilities of technology.",
+    "heroImage": "/dev.gif"
+  },
+
+  "terminal": {
+    "username": "onadi",
+    "computerScience": "Computer Science Undergraduate",
+    "university": "SLIIT",
+    "interest": "AI Enthusiast",
+    "personality": "Problem Solver",
+    "skills": "Java, Python, JavaScript, React, SQL, Git, C",
+    "status": "Learning. Building. Growing.",
+    "loadingText": "loading portfolio...",
+    "loadingPercentage": "100%"
+  },
+
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "icon": "fab fa-github",
+      "url": ""
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "fab fa-linkedin-in",
+      "url": ""
+    },
+    {
+      "name": "Email",
+      "icon": "fas fa-envelope",
+      "url": ""
+    },
+    {
+      "name": "Website",
+      "icon": "fas fa-globe",
+      "url": ""
+    }
+  ],
+
+  "heroButtons": [
+    {
+      "text": "View My Work",
+      "action": "projects"
+    },
+    {
+      "text": "Get In Touch",
+      "action": "contact"
+    }
+  ],
+
+  "stats": [
+    {
+      "icon": "💻",
+      "value": "5+",
+      "label": "Projects Completed"
+    },
+    {
+      "icon": "{}",
+      "value": "5+",
+      "label": "Technologies Explored"
+    },
+    {
+      "icon": "👥",
+      "value": "2+",
+      "label": "Open Source Contributions"
+    },
+    {
+      "icon": "☕",
+      "value": "∞",
+      "label": "Curiosity Level"
+    }
+  ]
+}

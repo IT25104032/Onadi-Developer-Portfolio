@@ -1,25 +1,52 @@
+import data from "../data/navbar.json";
+
 function Navbar() {
+
+  const { logo, links, resume } = data;
+
   return (
     <nav className="w-full flex justify-between items-center px-12 py-6">
+
       {/* Logo */}
       <h1 className="text-4xl font-semibold text-white tracking-tight">
-        Onadi<span className="text-violet-500">.</span>
+        {logo.name}
+        <span className="text-violet-500">
+          {logo.accent}
+        </span>
       </h1>
+
 
       {/* Navigation Links */}
       <ul className="flex gap-10 text-gray-300">
-        <li className="hover:text-violet-400 cursor-pointer">Home</li>
-        <li className="hover:text-violet-400 cursor-pointer">About</li>
-        <li className="hover:text-violet-400 cursor-pointer">Skills</li>
-        <li className="hover:text-violet-400 cursor-pointer">Projects</li>
-        <li className="hover:text-violet-400 cursor-pointer">Experience</li>
-        <li className="hover:text-violet-400 cursor-pointer">Contact</li>
+
+        {links.map((link) => (
+
+          <li
+            key={link.target}
+            className="hover:text-violet-400 cursor-pointer transition"
+          >
+
+            <a href={`#${link.target}`}>
+              {link.name}
+            </a>
+
+          </li>
+
+        ))}
+
       </ul>
 
+
       {/* Resume Button */}
-      <button className="border border-violet-500 px-6 py-3 rounded-full text-white hover:bg-violet-600 transition">
-        Resume
-      </button>
+      <a
+        href={resume.file}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="border border-violet-500 px-6 py-3 rounded-full text-white hover:bg-violet-600 transition"
+      >
+        {resume.text}
+      </a>
+
     </nav>
   );
 }

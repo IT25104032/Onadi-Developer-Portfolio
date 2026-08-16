@@ -1,4 +1,4 @@
-import portfolio from "../data/portfolio.json";
+import myprojects from "../data/myprojects.json";
 import ScrollReveal from "./ScrollReveal";
 
 function Projects() {
@@ -53,7 +53,7 @@ function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-          {portfolio.projects.map((project, index) => (
+          {myprojects.projects.map((project, index) => (
 
             <div
               key={index}

@@ -1,101 +1,8 @@
+import data from "../data/skills.json";
+
 function Skills() {
-  const rows = [
-    // =====================================================
-    // ROW 1 — 6
-    // =====================================================
-    [
-      {
-        name: "Python",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-      },
-      {
-        name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-      },
-      {
-        name: "C",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
-      },
-      {
-        name: "HTML",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-      },
-      {
-        name: "Spring Boot",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
-      },
-      {
-        name: "CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-      },
-    ],
 
-    // =====================================================
-    // ROW 2 — 5
-    // =====================================================
-    [
-      {
-        name: "React",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-      },
-      {
-        name: "Node.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
-      },
-      {
-        name: "Tailwind",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-      },
-      {
-        name: "MySQL",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-      },
-      {
-        name: "Firebase",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
-      },
-    ],
-
-    // =====================================================
-    // ROW 3 — 4
-    // =====================================================
-    [
-      {
-        name: "Git",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-      },
-      {
-        name: "GitHub",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-      },
-      {
-        name: "Linux",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
-      },
-      {
-        name: "VS Code",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
-      },
-    ],
-
-    // =====================================================
-    // ROW 4 — 3
-    // =====================================================
-    [
-      {
-        name: "Vercel",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
-      },
-      {
-        name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-      },
-      {
-        name: "R",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg",
-      },
-    ],
-  ];
+  const { tag, title, description, rows, footer } = data;
 
   return (
     <section id="skills" className="tech-stack-section">
@@ -130,16 +37,15 @@ function Skills() {
         <div className="tech-stack-header">
 
           <div className="tech-terminal-label">
-            &lt; developer tools I use /&gt;
+            {tag}
           </div>
 
           <h2>
-            TECH STACK
+            {title}
           </h2>
 
           <p>
-            Technologies and tools I use to build,
-            learn and create.
+            {description}
           </p>
 
         </div>
@@ -206,7 +112,7 @@ function Skills() {
           </span>
 
           <span>
-            keep learning. keep building.
+            {footer.text}
           </span>
 
           <span className="tech-cursor">

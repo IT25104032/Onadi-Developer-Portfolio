@@ -1,0 +1,23 @@
+{
+  "tag": "ABOUT",
+  "title": "About Me",
+  "description": "I’m Onadi Kahandawa, a second-year Computer Science undergraduate at SLIIT, driven by a strong passion for software engineering, AI, and continuous growth. I focus on learning by building—turning ideas into practical solutions while constantly improving my skills.\n\nAs an aspiring developer, I embrace challenges, explore modern technologies, and push myself beyond the basics. This journey is not just about what I know today, but about how fast I’m evolving into a confident and capable developer.",
+  "image": "/about.jpg",
+  "cards": [
+    {
+      "icon": "🎓",
+      "title": "Education",
+      "description": "BSc (Hons) in Computer Science | SLIIT"
+    },
+    {
+      "icon": "💡",
+      "title": "Interests",
+      "description": "AI, Web Development, Open Source, Problem Solving"
+    },
+    {
+      "icon": "⚡",
+      "title": "Currently Learning",
+      "description": "Java, Spring Boot, Figma, React, Data Structures & Algorithms"
+    }
+  ]
+}
