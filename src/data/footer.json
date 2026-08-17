@@ -1,0 +1,58 @@
+{
+  "logo": "Onadi",
+  "tagline": "Aspiring Software Engineer & AI Enthusiast",
+
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "#home"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "Education",
+      "href": "#education"
+    },
+    {
+      "label": "Awards",
+      "href": "#awards"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+
+  "socials": [
+    {
+      "name": "GitHub",
+      "icon": "fab fa-github",
+      "url": "https://github.com/yourusername"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "fab fa-linkedin-in",
+      "url": "https://www.linkedin.com/in/yourusername/"
+    },
+    {
+      "name": "Email",
+      "icon": "fas fa-envelope",
+      "url": "mailto:youremail@example.com"
+    }
+  ],
+
+  "closingMessage": "> thanks for visiting_",
+
+  "copyright": "© 2026 Onadi Kahandawa",
+  "builtWith": "Built with React & Tailwind CSS"
+}

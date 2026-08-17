@@ -5,14 +5,14 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-24 px-6 bg-[#080C18] overflow-hidden"
+      className="relative py-24 px-6 bg-[#050816] overflow-hidden"
     >
 
       {/* ========================= */}
       {/* BACKGROUND GLOW */}
       {/* ========================= */}
 
-      <div className="absolute top-20 left-1/3 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
 
       <div className="max-w-7xl mx-auto relative z-10">

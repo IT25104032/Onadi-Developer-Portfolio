@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
 
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    background: #050816;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 
 /* TERMINAL FONT */
 .terminal-font {

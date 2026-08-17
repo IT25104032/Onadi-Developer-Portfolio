@@ -5,6 +5,7 @@ function Skills() {
   const { tag, title, description, rows, footer } = data;
 
   return (
+    
     <section id="skills" className="tech-stack-section">
 
       {/* =========================================
@@ -124,6 +125,8 @@ function Skills() {
       </div>
 
     </section>
+
+    
   );
 }
 
