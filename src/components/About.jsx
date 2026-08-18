@@ -13,7 +13,7 @@ function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="py-24 bg-[#050816] relative"
+            className="py-16 bg-[#050816] relative"
         >
 
             {/* GRID BACKGROUND */}

@@ -192,21 +192,19 @@ function Hero() {
 
                         {/* TEXT */}
 
-                        <div className="max-w-[520px] mt-18 -ml-30">
+                        <div className="max-w-[600px] mt-18 -ml-30">
 
 
                             {/* NAME */}
 
-                            <h1 className="text-5xl font-bold leading-tight">
-
-                                Hi, I’m <br />
-
-                                <span className="text-purple-500">
-
-                                    {profile.name}
-
+                            <h1 className="leading-tight">
+                                <span className="block text-4xl font-regular text-white">
+                                    Hi, I’m
                                 </span>
 
+                                <span className="block text-7xl font-bold text-purple-500 mt-1">
+                                    {profile.name}
+                                </span>
                             </h1>
 
 
@@ -225,20 +223,12 @@ function Hero() {
                             </p>
 
 
-                            {/* DESCRIPTION */}
-
-                            <p className="mt-4 text-gray-400">
-
-                                {profile.description}
-
-                            </p>
-
 
                             {/* =================================================
                                 BUTTONS
                             ================================================= */}
 
-                            <div className="mt-6 flex gap-4">
+                            <div className="mt-24 flex gap-4">
 
                                 {heroButtons.map((button) => (
 
@@ -246,53 +236,14 @@ function Hero() {
                                         key={button.text}
                                         className={
                                             button.action === "projects"
-
-                                                ? "bg-purple-600 px-6 py-3 rounded-lg hover:bg-purple-700 transition"
-
-                                                : "border border-gray-500 px-6 py-3 rounded-lg hover:bg-white/10 transition"
+                                                ? "bg-purple-600 px-7 py-3 rounded-lg hover:bg-purple-700 transition whitespace-nowrap"
+                                                : "border border-gray-500 px-7 py-3 rounded-lg hover:bg-white/10 transition whitespace-nowrap"
                                         }
                                     >
-
                                         {button.text} →
-
                                     </button>
 
                                 ))}
-
-                            </div>
-
-
-                            {/* =================================================
-                                LET'S CONNECT
-                            ================================================= */}
-
-                            <div className="mt-8">
-
-                                <p className="text-gray-400 mb-3">
-                                    Let’s connect
-                                </p>
-
-
-                                <div className="flex gap-4">
-
-                                    {socialLinks.map((social) => (
-
-                                        <a
-                                            key={social.name}
-                                            href={social.url || "#"}
-                                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#11152a] hover:bg-purple-600 transition"
-                                            aria-label={social.name}
-                                        >
-
-                                            <i
-                                                className={`${social.icon} text-white`}
-                                            ></i>
-
-                                        </a>
-
-                                    ))}
-
-                                </div>
 
                             </div>
 

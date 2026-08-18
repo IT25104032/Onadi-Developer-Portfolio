@@ -22,10 +22,6 @@
       "target": "projects"
     },
     {
-      "name": "Experience",
-      "target": "experience"
-    },
-    {
       "name": "Contact",
       "target": "contact"
     }

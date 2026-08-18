@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="w-full flex justify-between items-center px-12 py-6 bg-[#050816] text-white">
 
       {/* Logo */}
-      <h1 className="text-4xl font-semibold text-white tracking-tight">
+      <h1 className="text-3xl font-semibold text-white tracking-tight">
         {logo.name}
         <span className="text-violet-500">
           {logo.accent}

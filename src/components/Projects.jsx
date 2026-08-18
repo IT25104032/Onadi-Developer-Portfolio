@@ -5,7 +5,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative py-24 px-6 bg-[#050816] overflow-hidden"
+      className="relative py-16 px-6 bg-[#050816] overflow-hidden"
     >
 
       {/* ========================= */}
