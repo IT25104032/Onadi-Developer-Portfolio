@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import data from "../data/contact.json";
+import data from "../data/mycontact.json";
 
 function Contact() {
     return (
