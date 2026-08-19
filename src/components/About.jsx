@@ -60,6 +60,8 @@ function About() {
                         <p className="text-gray-400 text-sm whitespace-pre-line leading-relaxed">
                             {about.description}
                         </p>
+                    
+
 
 
                         {/* =================================================

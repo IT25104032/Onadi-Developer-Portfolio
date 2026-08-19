@@ -106,48 +106,6 @@ function Projects() {
                 )}
 
 
-                {/* RENTFLOW PLACEHOLDER */}
-
-                {project.image === "rentflow" && (
-
-                  <div
-                    className="
-                      w-full
-                      h-full
-                      flex
-                      flex-col
-                      items-center
-                      justify-center
-                      bg-[#0F1425]
-                    "
-                  >
-
-                    <div
-                      className="
-                        text-3xl
-                        text-purple-400
-                        opacity-60
-                        terminal-font
-                        mb-3
-                      "
-                    >
-                      {"{ }"}
-                    </div>
-
-
-                    <p className="text-sm text-gray-500">
-                      Project in progress
-                    </p>
-
-
-                    <p className="text-xs text-gray-600 mt-1">
-                      Preview coming soon
-                    </p>
-
-                  </div>
-
-                )}
-
 
                 {/* Dark overlay */}
 

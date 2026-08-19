@@ -1,7 +1,50 @@
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import data from "../data/mycontact.json";
 
 function Contact() {
+    const form = useRef();
+
+    const [sending, setSending] = useState(false);
+    const [status, setStatus] = useState("");
+
+    // Send email using EmailJS
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        setSending(true);
+        setStatus("");
+
+        emailjs
+            .sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                form.current,
+                {
+                    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+                }
+            )
+            .then(
+                () => {
+                    setStatus("Message sent successfully! ✓");
+                    setSending(false);
+
+                    // Clear the form after successful submission
+                    form.current.reset();
+                },
+                (error) => {
+                    console.error("EmailJS Error:", error);
+
+                    setStatus(
+                        "Something went wrong. Please try again."
+                    );
+
+                    setSending(false);
+                }
+            );
+    };
+
     return (
         <motion.section
             id="contact"
@@ -200,7 +243,9 @@ function Contact() {
                         RIGHT SIDE — CONTACT FORM
                     ====================================== */}
 
-                    <div
+                    <form
+                        ref={form}
+                        onSubmit={sendEmail}
                         className="
                             bg-[#0B0F1A]/90
                             border
@@ -225,8 +270,10 @@ function Contact() {
 
                             <input
                                 id="name"
+                                name="name"
                                 type="text"
                                 placeholder={data.form.namePlaceholder}
+                                required
                                 className="
                                     w-full
                                     bg-[#070B1A]
@@ -261,8 +308,10 @@ function Contact() {
 
                             <input
                                 id="email"
+                                name="email"
                                 type="email"
                                 placeholder={data.form.emailPlaceholder}
+                                required
                                 className="
                                     w-full
                                     bg-[#070B1A]
@@ -297,8 +346,10 @@ function Contact() {
 
                             <input
                                 id="subject"
+                                name="subject"
                                 type="text"
                                 placeholder={data.form.subjectPlaceholder}
+                                required
                                 className="
                                     w-full
                                     bg-[#070B1A]
@@ -333,8 +384,10 @@ function Contact() {
 
                             <textarea
                                 id="message"
+                                name="message"
                                 rows="5"
                                 placeholder={data.form.messagePlaceholder}
+                                required
                                 className="
                                     w-full
                                     bg-[#070B1A]
@@ -360,13 +413,16 @@ function Contact() {
                         {/* SEND BUTTON */}
 
                         <button
-                            type="button"
+                            type="submit"
+                            disabled={sending}
                             className="
                                 w-full
                                 py-3
                                 rounded-lg
                                 bg-purple-600
                                 hover:bg-purple-700
+                                disabled:opacity-50
+                                disabled:cursor-not-allowed
                                 text-white
                                 font-medium
                                 transition
@@ -374,10 +430,32 @@ function Contact() {
                                 shadow-purple-600/20
                             "
                         >
-                            {data.form.buttonText}
+                            {sending
+                                ? "Sending..."
+                                : data.form.buttonText}
                         </button>
 
-                    </div>
+
+                        {/* STATUS MESSAGE */}
+
+                        {status && (
+                            <p
+                                className={`
+                                    mt-4
+                                    text-center
+                                    text-sm
+                                    ${
+                                        status.includes("successfully")
+                                            ? "text-green-400"
+                                            : "text-red-400"
+                                    }
+                                `}
+                            >
+                                {status}
+                            </p>
+                        )}
+
+                    </form>
 
                 </div>
 

@@ -10,17 +10,6 @@
         "JavaScript"
       ],
       "image": "freecheck"
-    },
-    {
-      "title": "RentFlow",
-      "description": "An equipment hire and rental management system being developed for COMPULIN (Pvt) Ltd. to streamline rental operations and management.",
-      "technologies": [
-        "Java",
-        "Spring Boot",
-        "MySQL"
-      ],
-      "image": "rentflow",
-      "github": "YOUR_GITHUB_LINK_HERE"
     }
   ]
 }
