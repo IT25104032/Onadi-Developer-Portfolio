@@ -39,11 +39,6 @@
       "name": "LinkedIn",
       "icon": "fab fa-linkedin-in",
       "url": "https://www.linkedin.com/in/onadi-kahandawa-788a38385/"
-    },
-    {
-      "name": "Email",
-      "icon": "fas fa-envelope",
-      "url": "mailto:youremail@example.com"
     }
   ],
 
