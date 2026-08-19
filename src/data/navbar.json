@@ -27,6 +27,13 @@
     }
   ],
 
+  "more": [
+    {
+      "name": "Awards & Achievements",
+      "target": "awards"
+    }
+  ],
+
   "resume": {
     "text": "Resume",
     "file": "/resume.pdf"

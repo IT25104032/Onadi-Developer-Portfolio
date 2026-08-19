@@ -11,7 +11,7 @@ function Awards() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="py-16 bg-[#050816] relative text-white overflow-hidden"
+            className="py-10 bg-[#050816] relative text-white overflow-hidden"
         >
 
             {/* =========================================

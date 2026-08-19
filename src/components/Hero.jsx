@@ -4,9 +4,26 @@ function Hero() {
 
     const { profile, terminal, socialLinks, heroButtons, stats } = data;
 
+    // Smooth scroll to section
+    const handleScroll = (e, target) => {
+        e.preventDefault();
+
+        const section = document.getElementById(target);
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    };
+
     return (
 
-        <section className="relative min-h-screen bg-[#050816] text-white overflow-hidden">
+        <section
+            id="home"
+            className="relative min-h-screen bg-[#050816] text-white overflow-hidden"
+        >
 
             {/* GRID BACKGROUND */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
@@ -41,9 +58,7 @@ function Hero() {
 
 
                             <p className="text-gray-400 text-sm terminal-font">
-
                                 {terminal.username}@portfolio:~
-
                             </p>
 
 
@@ -159,9 +174,7 @@ function Hero() {
 
 
                                     <span className="text-gray-300">
-
                                         {terminal.loadingPercentage}
-
                                     </span>
 
                                 </div>
@@ -172,9 +185,7 @@ function Hero() {
                             {/* CURSOR */}
 
                             <p className="text-green-400">
-
                                 &gt; <span className="animate-pulse">_</span>
-
                             </p>
 
                         </div>
@@ -198,6 +209,7 @@ function Hero() {
                             {/* NAME */}
 
                             <h1 className="leading-tight">
+
                                 <span className="block text-4xl font-regular text-white">
                                     Hi, I’m
                                 </span>
@@ -205,6 +217,7 @@ function Hero() {
                                 <span className="block text-7xl font-bold text-purple-500 mt-1">
                                     {profile.name}
                                 </span>
+
                             </h1>
 
 
@@ -215,9 +228,7 @@ function Hero() {
                                 {profile.role} & <br />
 
                                 <span className="text-purple-400">
-
                                     {profile.secondaryRole}
-
                                 </span>
 
                             </p>
@@ -232,16 +243,29 @@ function Hero() {
 
                                 {heroButtons.map((button) => (
 
-                                    <button
+                                    <a
                                         key={button.text}
+                                        href={
+                                            button.action === "projects"
+                                                ? "#projects"
+                                                : "#contact"
+                                        }
+                                        onClick={(e) =>
+                                            handleScroll(
+                                                e,
+                                                button.action === "projects"
+                                                    ? "projects"
+                                                    : "contact"
+                                            )
+                                        }
                                         className={
                                             button.action === "projects"
-                                                ? "bg-purple-600 px-7 py-3 rounded-lg hover:bg-purple-700 transition whitespace-nowrap"
-                                                : "border border-gray-500 px-7 py-3 rounded-lg hover:bg-white/10 transition whitespace-nowrap"
+                                                ? "bg-purple-600 px-7 py-3 rounded-lg hover:bg-purple-700 transition whitespace-nowrap cursor-pointer"
+                                                : "border border-gray-500 px-7 py-3 rounded-lg hover:bg-white/10 transition whitespace-nowrap cursor-pointer"
                                         }
                                     >
                                         {button.text} →
-                                    </button>
+                                    </a>
 
                                 ))}
 
@@ -292,21 +316,15 @@ function Hero() {
                         >
 
                             <p className="text-purple-400 text-2xl mb-2">
-
                                 {stat.icon}
-
                             </p>
 
                             <h2 className="text-white text-2xl font-semibold">
-
                                 {stat.value}
-
                             </h2>
 
                             <p className="text-gray-400 text-sm">
-
                                 {stat.label}
-
                             </p>
 
                         </div>
