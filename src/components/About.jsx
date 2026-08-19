@@ -15,6 +15,7 @@ function About() {
             viewport={{ once: true }}
             className="py-16 bg-[#050816] relative"
         >
+            <div data-aos="fade-right"></div>
 
             {/* GRID BACKGROUND */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>

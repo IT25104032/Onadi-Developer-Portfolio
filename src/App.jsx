@@ -6,6 +6,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Awards from "./components/Awards";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import SectionTransition from "./components/SectionTransition";
 
@@ -29,6 +30,7 @@ function App() {
             <Skills />
             <Projects />
             <Awards />
+            <Contact />
             <Footer />
         </>
     );

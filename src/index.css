@@ -40,9 +40,9 @@ body {
   position: relative;
 
   width: 100%;
-  min-height: 900px;
+  min-height: auto;
 
-  padding: 110px 30px 90px;
+  padding: 70px 30px 60px;
 
   overflow: hidden;
 

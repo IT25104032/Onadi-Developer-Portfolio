@@ -4,6 +4,20 @@ function Navbar() {
 
   const { logo, links, resume } = data;
 
+  // Smooth scroll to section
+  const handleScroll = (e, target) => {
+    e.preventDefault();
+
+    const section = document.getElementById(target);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  };
+
   return (
     <nav className="w-full flex justify-between items-center px-12 py-6 bg-[#050816] text-white">
 
@@ -23,10 +37,14 @@ function Navbar() {
 
           <li
             key={link.target}
-            className="hover:text-violet-400 cursor-pointer transition"
+            className="hover:text-violet-400 transition"
           >
 
-            <a href={`#${link.target}`}>
+            <a
+              href={`#${link.target}`}
+              onClick={(e) => handleScroll(e, link.target)}
+              className="cursor-pointer"
+            >
               {link.name}
             </a>
 
@@ -42,7 +60,16 @@ function Navbar() {
         href={resume.file}
         target="_blank"
         rel="noopener noreferrer"
-        className="border border-violet-500 px-6 py-3 rounded-full text-white hover:bg-violet-600 transition"
+        className="
+          border
+          border-violet-500
+          px-6
+          py-3
+          rounded-full
+          text-white
+          hover:bg-violet-600
+          transition
+        "
       >
         {resume.text}
       </a>

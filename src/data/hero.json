@@ -12,34 +12,11 @@
     "university": "SLIIT",
     "interest": "AI Enthusiast",
     "personality": "Problem Solver",
-    "skills": "Java, Python, JavaScript, React, SQL, Git, C",
+    "skills": "Java, Python, JavaScript, SQL, Git, C",
     "status": "Learning. Building. Growing.",
     "loadingText": "loading portfolio...",
     "loadingPercentage": "100%"
   },
-
-  "socialLinks": [
-    {
-      "name": "GitHub",
-      "icon": "fab fa-github",
-      "url": ""
-    },
-    {
-      "name": "LinkedIn",
-      "icon": "fab fa-linkedin-in",
-      "url": ""
-    },
-    {
-      "name": "Email",
-      "icon": "fas fa-envelope",
-      "url": ""
-    },
-    {
-      "name": "Website",
-      "icon": "fas fa-globe",
-      "url": ""
-    }
-  ],
 
   "heroButtons": [
     {

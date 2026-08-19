@@ -1,0 +1,42 @@
+{
+  "tag": "< GET IN TOUCH />",
+  "title": "Let's Talk",
+  "description": "Have a project in mind or just want to connect? I'd love to hear from you.",
+
+  "intro": {
+    "title": "Let's Connect",
+    "description": "I'm always open to discussing new projects, ideas, collaborations, and opportunities."
+  },
+
+  "contactInfo": [
+    {
+      "label": "Email",
+      "value": "onadikahandawa@gmail.com",
+      "icon": "✉"
+    },
+    {
+      "label": "Location",
+      "value": "Sri Lanka",
+      "icon": "◉"
+    }
+  ],
+
+  "socialLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/onadik"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/onadi-kahandawa-788a38385/"
+    }
+  ],
+
+  "form": {
+    "namePlaceholder": "Enter your name",
+    "emailPlaceholder": "Enter your email",
+    "subjectPlaceholder": "What would you like to discuss?",
+    "messagePlaceholder": "Write your message...",
+    "buttonText": "Send Message →"
+  }
+}
