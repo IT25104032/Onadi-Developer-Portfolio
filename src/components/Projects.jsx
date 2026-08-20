@@ -8,9 +8,9 @@ function Projects() {
       className="relative py-14 px-6 bg-[#050816] overflow-hidden"
     >
 
-      {/* ========================= */}
+
       {/* BACKGROUND GLOW */}
-      {/* ========================= */}
+
 
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
@@ -18,9 +18,9 @@ function Projects() {
       <div className="max-w-7xl mx-auto relative z-10">
 
 
-        {/* ========================= */}
+
         {/* SECTION HEADER */}
-        {/* ========================= */}
+
 
         <div className="mb-8">
 
@@ -47,9 +47,9 @@ function Projects() {
         </div>
 
 
-        {/* ========================= */}
+
         {/* PROJECT GRID */}
-        {/* ========================= */}
+
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
@@ -72,9 +72,8 @@ function Projects() {
               "
             >
 
-              {/* ========================= */}
               {/* PROJECT IMAGE AREA */}
-              {/* ========================= */}
+
 
               <div
                 className="
@@ -123,9 +122,7 @@ function Projects() {
               </div>
 
 
-              {/* ========================= */}
               {/* PROJECT CONTENT */}
-              {/* ========================= */}
 
               <div className="p-4">
 
@@ -159,9 +156,7 @@ function Projects() {
                 </p>
 
 
-                {/* ========================= */}
                 {/* TECHNOLOGIES */}
-                {/* ========================= */}
 
                 <div className="flex flex-wrap gap-2 mt-4">
 
@@ -188,9 +183,7 @@ function Projects() {
                 </div>
 
 
-                {/* ========================= */}
                 {/* GITHUB LINK */}
-                {/* ========================= */}
 
                 {project.github && (
 

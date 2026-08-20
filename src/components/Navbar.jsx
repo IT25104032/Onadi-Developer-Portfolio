@@ -19,7 +19,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full flex justify-between items-center px-12 py-6 bg-[#050816] text-white">
+    <nav className="w-full grid grid-cols-3 items-center px-4 sm:px-6 lg:px-12 py-5 lg:py-6 bg-[#050816] text-white">
 
       {/* Logo */}
       <h1 className="text-3xl font-semibold text-white tracking-tight">
@@ -31,7 +31,7 @@ function Navbar() {
 
 
       {/* Navigation Links */}
-      <ul className="flex items-center gap-10 text-gray-300">
+      <ul className="hidden md:flex items-center justify-center gap-5 lg:gap-10 text-gray-300">
 
         {links.map((link) => (
 
@@ -141,26 +141,6 @@ function Navbar() {
         </li>
 
       </ul>
-
-
-      {/* Resume Button */}
-      <a
-        href={resume.file}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-          border
-          border-violet-500
-          px-6
-          py-3
-          rounded-full
-          text-white
-          hover:bg-violet-600
-          transition
-        "
-      >
-        {resume.text}
-      </a>
 
     </nav>
   );

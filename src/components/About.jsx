@@ -64,9 +64,7 @@ function About() {
 
 
 
-                        {/* =================================================
-                            CARDS
-                        ================================================= */}
+                        {/* CARDS */}
 
                         <div className="space-y-4 mt-12">
 
@@ -132,9 +130,7 @@ function About() {
 
 
 
-                    {/* =================================================
-                        RIGHT SIDE IMAGE
-                    ================================================= */}
+                    {/* RIGHT SIDE IMAGE */}
 
                     <div className="relative flex justify-center">
 

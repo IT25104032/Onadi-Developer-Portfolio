@@ -14,30 +14,22 @@ function Awards() {
             className="py-14 bg-[#050816] relative text-white overflow-hidden"
         >
 
-            {/* =========================================
-                BACKGROUND GRID
-            ========================================== */}
+            {/* BACKGROUND GRID */}
 
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1a1f35_1px,transparent_1px),linear-gradient(to_bottom,#1a1f35_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
 
-            {/* =========================================
-                PURPLE BACKGROUND GLOW
-            ========================================== */}
+            {/* PURPLE BACKGROUND GLOW */}
 
             <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-700/10 blur-[120px] rounded-full"></div>
 
 
-            {/* =========================================
-                MAIN CONTAINER
-            ========================================== */}
+            {/* MAIN CONTAINER */}
 
             <div className="max-w-7xl mx-auto px-6 relative z-10 -translate-x-6">
 
 
-                {/* =====================================
-                    HEADER
-                ====================================== */}
+                {/* HEADER */}
 
                 <div className="mb-8">
 
@@ -72,9 +64,7 @@ function Awards() {
                 </div>
 
 
-                {/* =====================================
-                    AWARD GRID
-                ====================================== */}
+                {/* AWARD GRID */}
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
@@ -102,9 +92,7 @@ function Awards() {
                         >
 
 
-                            {/* =================================
-                                NORMAL AWARD CARD
-                            ================================== */}
+                            {/* NORMAL AWARD CARD */}
 
                             {award.type === "award" && (
 
@@ -121,9 +109,7 @@ function Awards() {
                                     <div className="grid grid-cols-1 sm:grid-cols-2 h-full">
 
 
-                                        {/* =================================
-                                            IMAGE
-                                        ================================== */}
+                                        {/* IMAGE */}
 
                                         <div className="relative h-[330px] sm:h-auto overflow-hidden">
 
@@ -146,9 +132,7 @@ function Awards() {
                                         </div>
 
 
-                                        {/* =================================
-                                            AWARD INFORMATION
-                                        ================================== */}
+                                        {/* AWARD INFORMATION */}
 
                                         <div className="relative p-6 flex flex-col justify-center">
 

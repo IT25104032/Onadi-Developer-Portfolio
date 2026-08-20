@@ -32,14 +32,10 @@ function Hero() {
             <div className="max-w-7xl mx-auto w-full relative z-10">
 
                 {/* HERO GRID */}
-                <div className="grid md:grid-cols-2 gap-4 items-center">
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-8 items-center">
+                    {/* LEFT - TERMINAL */}
 
-
-                    {/* =================================================
-                        LEFT - TERMINAL
-                    ================================================= */}
-
-                    <div className="mt-10 -ml-10 bg-[#0B0F1A] border border-[#2A2F45] rounded-2xl w-full max-w-[500px] overflow-hidden terminal-glow">
+                    <div className="mt-6 lg:mt-10 lg:-ml-10 bg-[#0B0F1A] border border-[#2A2F45] rounded-2xl w-full max-w-[500px] overflow-hidden terminal-glow">
 
 
                         {/* TOP BAR */}
@@ -194,27 +190,25 @@ function Hero() {
 
 
 
-                    {/* =================================================
-                        RIGHT SIDE
-                    ================================================= */}
+                    {/* RIGHT SIDE */}
 
                     <div className="flex items-center justify-between gap-10">
 
 
                         {/* TEXT */}
 
-                        <div className="max-w-[600px] mt-18 -ml-30">
+                        <div className="w-full max-w-[600px] mt-10 xl:mt-18 xl:-ml-30">
 
 
                             {/* NAME */}
 
                             <h1 className="leading-tight">
 
-                                <span className="block text-4xl font-regular text-white">
+                                <span className="block text-3xl sm:text-4xl lg:text-4xl text-white">
                                     Hi, I’m
                                 </span>
 
-                                <span className="block text-7xl font-bold text-purple-500 mt-1">
+                                <span className="block text-5xl sm:text-6xl lg:text-7xl font-bold text-purple-500 mt-1">
                                     {profile.name}
                                 </span>
 
@@ -235,9 +229,7 @@ function Hero() {
 
 
 
-                            {/* =================================================
-                                BUTTONS
-                            ================================================= */}
+                            {/* BUTTONS */}
 
                             <div className="mt-24 flex gap-4">
 
@@ -275,11 +267,9 @@ function Hero() {
 
 
 
-                        {/* =================================================
-                            GIF
-                        ================================================= */}
+                        {/* GIF */}
 
-                        <div className="relative hidden md:flex justify-center items-center">
+                        <div className="relative hidden xl:flex justify-center items-center w-full">
 
                             {/* Glow */}
 
@@ -291,7 +281,7 @@ function Hero() {
                             <img
                                 src={profile.heroImage}
                                 alt="Developer animation"
-                                className="w-[700px] h-auto mt-10 ml-10 relative z-10"
+                                className="w-full max-w-[550px] xl:max-w-[700px] h-auto relative z-10"
                             />
 
                         </div>
@@ -302,9 +292,7 @@ function Hero() {
 
 
 
-                {/* =================================================
-                    STATS
-                ================================================= */}
+                {/* STATS */}
 
                 <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
 
@@ -312,7 +300,7 @@ function Hero() {
 
                         <div
                             key={stat.label}
-                            className="bg-[#0D1124] border border-[#2A2F45] rounded-xl p-6 text-center"
+                            className="bg-[#0D1124] border border-[#2A2F45] rounded-xl p-3 text-center"
                         >
 
                             <p className="text-purple-400 text-2xl mb-2">
